@@ -1,12 +1,14 @@
 
-import { InputContainer } from './styles';
+import { InputContainer, FirstDisplay } from './styles';
 
-const Input = ({value}) => {
-    return (
+
+const Input = ({value, firstNumber, operation}) => {
+  return (
       <InputContainer>
-       <input disabled value={value}/>
+        <FirstDisplay>{firstNumber}{operation}</FirstDisplay>
+        <input disabled value={value} placeholder="0"/>
       </InputContainer>
-    );
-  }
-  
-  export default Input;
+  );
+};
+
+export default Input;
